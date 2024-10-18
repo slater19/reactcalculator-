@@ -1,0 +1,30 @@
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+  }
+
+.container-center {
+    margin: auto;
+    max-width: 225px;
+  }
+  .display {
+    border: 1px solid black;
+    border-radius: 0px;
+    height: 18px;
+    padding-bottom: 3px;
+    text-align: left;
+    background-color: white;
+  }
+  .keypad {
+    border-radius: 10px;
+    background-color: wheat;
+    
+  }
+  button{
+    
+    
+  }
