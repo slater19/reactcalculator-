@@ -31,6 +31,10 @@ const Calculator = () => {
             let res1=eval(res)
             setRes2(res1);
         }
+        else if(btn==='='&&res==""){
+          
+          setRes2("Error ");
+      }
     }
 
     // function sub(a,b){
