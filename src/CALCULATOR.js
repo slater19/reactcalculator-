@@ -7,6 +7,7 @@ import ButtonBox from "./ButtonBox";
 const Calculator = () => {
 
     let [res,setRes]=useState("")
+    let [res2,setRes2]=useState("")
     var btn1 = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var btn2 = ['+','-','*','/']
 
@@ -21,13 +22,14 @@ const Calculator = () => {
         }
         else if(btn==='C'){
             setRes('');
+            setRes2('');
         }
         else if(btn2.includes(btn)&&res!==""){
             setRes(res+btn);
         }
-        else if(btn==='='){
+        else if(btn==='='&&res!==""){
             let res1=eval(res)
-            setRes(res1);
+            setRes2(res1);
         }
     }
 
@@ -52,7 +54,10 @@ const Calculator = () => {
     <h1>React Calculator</h1>
     <main className="container-center">
 
-    <div className="display">{res}</div>   
+    <div >
+    <input type="text" name="change"   value={res} />
+      </div>   
+    {res2&&<div>{res2}</div>}
     <div className="keypad">
           <table>
             <tbody>
